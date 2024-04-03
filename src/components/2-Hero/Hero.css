@@ -1,0 +1,110 @@
+/* =============
+ table of contents
+===============
+ 
+1. Left Section
+2. Right Section
+3. Modal == popup
+4. Responsive Design (media query ) 
+ 
+*/
+
+
+
+section.hero{
+    margin-top: 3rem;
+}
+
+ 
+/* ===============
+   1. Left Section
+================ */
+section.hero .parent-avatar.flex{
+
+    align-items: end;
+    gap: 0.6rem;
+}
+
+section.hero .left-section {
+    flex-grow: 1;
+}
+section.hero .avatar {
+    width: 90px;
+    border-radius: 50%;
+    border: 1px solid rgb(211, 211, 211);
+    padding: 1px;
+}
+section.hero .icon-verified {
+    color: var(--blue);
+    font-size: 1.1rem;
+    margin-bottom: 0.3rem;
+}
+
+section.hero h1.title {
+    font-size: 2.85rem;
+    line-height: 3.3rem;
+    margin: 24px 0px;
+    color: var(--title);
+}
+section.hero p.sub-title {
+    color: var(--subtitle);
+    font-size: 0.9rem;
+    line-height: 1.65rem;
+    margin-bottom: 32px;
+    flex-wrap: wrap;
+    text-transform: capitalize;
+    }
+section.hero span.skinny {
+    font-weight: 300;
+    color: rgba(93, 187, 251, 1);
+
+}
+
+section.hero .all-icons {
+    gap: 1.5rem;
+    font-size: 2.85rem;
+}
+section.hero .all-icons .icon {
+ 
+    color: var(--subtitle);
+    font-size: 1.35rem;
+    cursor: pointer;
+    transition: 0.2s;
+}
+section.hero .all-icons .icon:hover{
+
+    color: var(--icon-hover);
+}
+
+
+/* ===============
+   2. Right Section
+================ */
+section.hero .right-section {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  margin-left: 3rem; /* Adjust the margin to increase space between left and right sections */
+}
+
+section.hero .iframe-container {
+  margin-bottom: 9rem; /* Add margin between iframe and card */
+}
+
+section.hero .card {
+  background-color: var(--blue); /* White background for the card */
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+section.hero .card p {
+  color: var(--secondary); /* Black text color for the paragraph */
+}
+
+.qr-code {
+  background-color: var(--title); /* Background color for the QR code */
+  border-radius: 8px; /* Adjust border-radius to match the card */
+  padding: 20px; /* Add padding for better spacing */
+}
