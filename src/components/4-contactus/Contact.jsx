@@ -1,7 +1,19 @@
 import React from "react";
 import "./Contact.css";
+import QRCode from "react-qr-code";
+
+const resumeUrl = "/Resume.pdf";
+
 
 export default function Contact() {
+  const downloadResume = () => {
+    const link = document.createElement("a");
+    link.href = resumeUrl;
+    link.setAttribute("download", "Resume.pdf");
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
   return (
     <section className="contact-us flex">
       <div className="left-section">
@@ -25,18 +37,17 @@ export default function Contact() {
           <button className="submit">Submit</button>
         </form>
       </div>
-      <div className="right-section animation">
-        <div className="iframe-container">
-          <iframe
-            src="https://open.spotify.com/embed/playlist/4829flRVJFnn8HqiYrhI4N?utm_source=generator&theme=0"
-            width="100%"
-            height="352"
-            frameBorder="0"
-            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-            loading="lazy"
-          ></iframe>
-      
+      <div className="right-section ">
+
+        <div className="card">
+          <p className="resume-text">Resume</p>
+          <p className="view-resume-text">Click to view resume</p>
         </div>
+
+           {/* <div className="card" onClick={downloadResume}>
+          <QRCode value={resumeUrl} size={150} className="qr-code" />
+          <p>Download my resume</p>
+        </div>  */}
       </div>
     </section>
   );

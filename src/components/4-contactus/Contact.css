@@ -93,3 +93,26 @@ section.contact-us button {
     align-self: center;
   }
 }
+
+section.contact-us .card {
+  background-color: var(--gray); /* Same background color as the page */
+  border: 1px solid var(--blue); /* Gray border */
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+section.contact-us .card p {
+  margin: 0;
+}
+
+.resume-text {
+  font-weight: bold;
+}
+
+.view-resume-text {
+  color: var(--secondary);
+  font-size: 0.8rem;
+}

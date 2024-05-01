@@ -1,18 +1,13 @@
 import React from "react";
 import "./Hero.css";
 import QRCode from "react-qr-code";
+import Lottie from "lottie-react";
+import codingAnimation from "../../../public/animation/coding.json"
 
-const resumeUrl = "/Resume.pdf";
+
 
 export default function Hero() {
-  const downloadResume = () => {
-    const link = document.createElement("a");
-    link.href = resumeUrl;
-    link.setAttribute("download", "Resume.pdf");
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  };
+
 
   return (
     <section className="hero flex">
@@ -37,11 +32,9 @@ export default function Hero() {
         </div>
       </div>
       <div className="right-section">
+      <Lottie style={{height : 500, width: 500}} animationData={codingAnimation} />
+
       
-        <div className="card" onClick={downloadResume}>
-          <QRCode value={resumeUrl} size={150} className="qr-code" />
-          <p>Download my resume</p>
-        </div>
       </div>
     </section>
   );
